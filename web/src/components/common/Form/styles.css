@@ -83,6 +83,7 @@ label#avatar {
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  margin-top: 17px;
   transition: .2s;
 }
 
