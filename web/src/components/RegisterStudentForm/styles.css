@@ -16,5 +16,5 @@ form.register_form .input_group label {
 }
 
 form.register_form .input_group input::placeholder {
-  font-size: 10px;
+  font-size: 13px;
 }
