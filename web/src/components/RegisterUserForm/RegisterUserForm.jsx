@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
 
-import Form from './common/Form/Form';
+import Form from '../common/Form/Form';
 
-function LoginForm() {
+import './styles.css';
+
+function RegisterUserForm() {
   const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const inputs = [
+    {
+      label: 'Name',
+      value: name,
+      placeholder: 'Full name',
+      id: 'name_input',
+      setAnState: setName,
+    },
     {
       label: 'Email',
       value: email,
@@ -22,11 +33,18 @@ function LoginForm() {
       type: 'password',
       setAnState: setPassword,
     },
+    {
+      label: 'Confirm password',
+      value: confirmPassword,
+      id: 'confirmPass_input',
+      type: 'password',
+      setAnState: setConfirmPassword,
+    },
   ];
 
   const buttons = [
     {
-      label: 'Register',
+      label: 'Cancel',
       className: 'secondary_button',
       type: 'button',
       handleAction: function () {
@@ -34,7 +52,7 @@ function LoginForm() {
       }
     },
     {
-      label: 'Login'
+      label: 'Register'
     },
   ];
 
@@ -45,8 +63,14 @@ function LoginForm() {
   }
 
   return(
-    <Form buttonsDisplay='btn_inline' handleSubmit={handleSubmit} title='Sign in' inputs={inputs} buttons={buttons} />
+    <Form
+      className='register_form' 
+      buttonsDisplay='btn_inline' 
+      handleSubmit={handleSubmit} 
+      title='Sign up' 
+      inputs={inputs} 
+      buttons={buttons} />
   );
 }
 
-export default LoginForm;
+export default RegisterUserForm;

@@ -12,3 +12,14 @@ body {
   background: #1b262c;
   color: #bbe1fa;
 }
+
+html, body, #root {
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

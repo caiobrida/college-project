@@ -1,0 +1,16 @@
+form.register_form .input_group {
+  margin: 0;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+form.register_form .input_group input {
+  font-size: 17px;
+}
+form.register_form .input_group label {
+  font-size: 27px;
+}
+
+form.register_form .input_group input::placeholder {
+  font-size: 10px;
+}

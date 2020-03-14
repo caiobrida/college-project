@@ -1,0 +1,73 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0f4c75;
+  width: auto;
+  border-radius: 10px;
+}
+h1 {
+  margin-top: 20px;
+  font-size: 64px;
+  font-weight: lighter;
+}
+.input_group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+}
+.input_group label {
+  font-size: 36px;
+  font-weight: bold;
+  border-bottom: 10px;
+}
+.input_group input {
+  padding: 5px;
+  width: 100%;
+  font-size: 21px;
+  border-style: none;
+  background: transparent;
+  border-bottom: 1px solid #bbe1fa;
+  font-weight: lighter;
+  color: #bbe1fa;
+}
+.input_group input::placeholder {
+  font-style: italic;
+  font-size: 17px;
+  color: #bbe1fa;
+  opacity: .7;
+}
+.input_group .btn_inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_inline button {
+  width: 162px;
+  height: 55px;
+  margin: 20px;
+  margin-bottom: 26px;
+  border-style: none;
+  color: #bbe1fa;
+  font-size: 23px;
+  cursor: pointer;
+  transition: .3s;
+}
+button.primary_button {
+  background: #3282b8;
+  font-weight: bold;
+}
+
+button.primary_button:hover {
+  background: #42abf1;
+}
+button.secondary_button {
+  background: #0f4c75;
+  border: 1px solid #bbe1fa;
+  font-weight: lighter;
+}
+button.secondary_button:hover {
+  background: #135d8f;
+}
