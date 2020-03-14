@@ -13,13 +13,16 @@ body {
   color: #bbe1fa;
 }
 
-html, body, #root {
+html, body, #root, .app {
   height: 100%;
 }
 
 .app {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "header header header"
+  ". form ."
+  ". . .";
 }

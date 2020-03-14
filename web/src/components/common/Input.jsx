@@ -2,7 +2,7 @@ import React from 'react';
 
 function Input(props) {
   return(
-    <div className='input_group'>
+    <div className={props.className || 'input_group'}>
         <label htmlFor={props.id}>{props.label}</label>
         <input
           value={props.value} 

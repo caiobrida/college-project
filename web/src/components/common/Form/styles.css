@@ -4,8 +4,10 @@ form {
   align-items: center;
   justify-content: center;
   background: #0f4c75;
-  width: auto;
   border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  grid-area: form;
 }
 h1 {
   margin-top: 20px;
@@ -25,7 +27,6 @@ h1 {
 }
 .input_group input {
   padding: 5px;
-  width: 100%;
   font-size: 21px;
   border-style: none;
   background: transparent;
@@ -70,4 +71,38 @@ button.secondary_button {
 }
 button.secondary_button:hover {
   background: #135d8f;
+}
+
+label#avatar {
+  display: flex;
+  border: 1px solid #bbe1fa;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+}
+
+label#avatar input {
+  display: none;
+}
+
+label#avatar:hover {
+  opacity: .5;
+}
+
+label#avatar.has_avatar {
+  border: 0;
+}
+
+div.inline_group {
+  display: flex;
+  flex-direction: row;
+}
+
+.inline_group input {
+  width: 100%;
 }

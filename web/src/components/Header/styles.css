@@ -1,0 +1,47 @@
+header {
+  grid-area: header;
+  background: #0f4c75;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header span {
+  color: #3282b8;
+  font-weight: bold;
+}
+
+header span#user_name {
+  color: #bbe1fa
+}
+
+header span#project_logo {
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 78px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #bbe1fa;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 78px;
+}
+
+header nav a {
+  padding-left: 23px;
+  font-size: 19px;
+  text-decoration: none;
+  color: #3282b8;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  color: #bbe1fa;
+}
