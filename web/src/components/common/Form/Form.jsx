@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 
 import Input from '../Input';
-import InlineInput from '../InlineInput/InlineInput';
 import Button from '../Button';
 import Avatar from '../Avatar';
 
