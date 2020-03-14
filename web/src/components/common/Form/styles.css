@@ -61,7 +61,8 @@ h1 {
 }
 @media only screen and (max-width: 993px) {
   .btn_inline button {
-    width: 105px;
+    width: 83px;
+    font-size: 17px;
   }
 }
 
