@@ -20,9 +20,5 @@ html, body, #root, .app {
 .app {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-row: 1fr 1fr 1fr;
-  grid-template-areas: 
-  "header header header"
-  ". form ."
-  ". . .";
+  grid-template-rows: 75px 1fr 1fr;
 }

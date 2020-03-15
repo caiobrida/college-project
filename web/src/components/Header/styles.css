@@ -1,5 +1,6 @@
 header {
-  grid-area: header;
+  grid-column: 1 / 100;
+  grid-row: 1;
   background: #0f4c75;
   height: 75px;
   display: flex;
@@ -44,4 +45,16 @@ header nav a {
 header nav a:hover {
   text-decoration: underline;
   color: #bbe1fa;
+}
+
+@media only screen and (max-width: 584px) {
+  #friendly_message {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  header span#project_logo {
+    font-size: 19px;
+  }
 }

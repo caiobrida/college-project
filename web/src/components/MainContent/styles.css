@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 17px;
+  border: 2px solid #bbe1fa;
+  grid-row: 2 / 100;
+  grid-column: 1 / 100;
+}
+
+main span {
+  text-align: center;
+  font-size: 36px;
+}

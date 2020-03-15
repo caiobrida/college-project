@@ -7,7 +7,8 @@ form {
   border-radius: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
-  grid-area: form;
+  grid-row: 2;
+  grid-column: 2;
 }
 h1 {
   margin-top: 20px;

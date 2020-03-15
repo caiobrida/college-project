@@ -7,7 +7,7 @@ function Header(props) {
     <header>
       <span id='project_logo'>Project logo</span>
       <nav>
-        <span>Hello, <span id='user_name'>User!</span></span>
+        <span id='friendly_message'>Hello, <span id='user_name'>User!</span></span>
         <a href='#'>Register a student</a>
         <a href='#'>Logout</a>
       </nav>
