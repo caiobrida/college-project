@@ -9,7 +9,8 @@ import genRandomId from '../../../utils/genRandomId';
 import './styles.css';
 
 function Form({ 
-    className, 
+    className,
+    errors, 
     buttonsDisplay, 
     handleSubmit, 
     title, 
@@ -27,6 +28,8 @@ function Form({
 
   return(
     <form onSubmit={handleSubmit} className={className || 'default_form'}>
+      { errors ? <div className='error_display'><span>{ errors.message }</span></div> 
+               : null }
       <h1>{ title }</h1>
       
       { avatarData && <Avatar 

@@ -5,6 +5,7 @@ import Form from './common/Form/Form';
 function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState(null);
 
   const inputs = [
     {
@@ -38,14 +39,21 @@ function LoginForm() {
     },
   ];
 
-  function handleSubmit(e) {
+  function handleSubmit(e) { // Auth demonstration
     e.preventDefault();
 
-    console.log('Submited');
+    if (email === 'admin@admin.com' && password === 'admin') console.log('Passed');
+    else setErrors({ message: 'Invalid email or password!' });
   }
 
   return(
-    <Form buttonsDisplay='btn_inline' handleSubmit={handleSubmit} title='Sign in' inputs={inputs} buttons={buttons} />
+    <Form 
+      buttonsDisplay='btn_inline' 
+      handleSubmit={handleSubmit} 
+      title='Sign in' 
+      errors={errors}
+      inputs={inputs} 
+      buttons={buttons} />
   );
 }
 
