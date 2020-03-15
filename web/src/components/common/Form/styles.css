@@ -5,11 +5,10 @@ form {
   justify-content: center;
   background: #0f4c75;
   border-radius: 10px;
-  margin-top: 30px;
   margin-bottom: 30px;
+  margin-top: 30px;
   grid-row: 2;
   grid-column: 2;
-  justify-self: center;
   align-self: center;
 }
 h1 {
