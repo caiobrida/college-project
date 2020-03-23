@@ -25,6 +25,7 @@ header span#project_logo {
   font-size: 26px;
   font-weight: bold;
   color: #bbe1fa;
+  cursor: pointer;
 }
 
 header nav {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Form from './common/Form/Form';
 
@@ -6,6 +7,8 @@ function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState(null);
+
+  const navigate = useNavigate();
 
   const inputs = [
     {
@@ -31,7 +34,7 @@ function LoginForm() {
       className: 'secondary_button',
       type: 'button',
       handleAction: function () {
-        console.log('Working!')
+        navigate('/register-user')
       }
     },
     {
@@ -42,7 +45,7 @@ function LoginForm() {
   function handleSubmit(e) { // Auth demonstration
     e.preventDefault();
 
-    if (email === 'admin@admin.com' && password === 'admin') console.log('Passed');
+    if (email === 'admin@admin.com' && password === 'admin') navigate('/dashboard');
     else setErrors({ message: 'Invalid email or password!' });
   }
 

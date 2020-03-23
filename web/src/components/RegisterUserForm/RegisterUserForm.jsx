@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Form from '../common/Form/Form';
 
 import './styles.css';
 
 function RegisterUserForm() {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
@@ -48,7 +51,7 @@ function RegisterUserForm() {
       className: 'secondary_button',
       type: 'button',
       handleAction: function () {
-        console.log('Working!')
+        navigate('/login')
       }
     },
     {
@@ -59,7 +62,7 @@ function RegisterUserForm() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    console.log('Submited');
+    navigate('/login');
   }
 
   return(

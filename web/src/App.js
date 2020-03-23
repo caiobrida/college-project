@@ -1,15 +1,13 @@
 import React from 'react';
 
-import Login from './pages/Login';
-import RegisterUser from './pages/RegisterUser';
-import LoggedContent from './pages/LoggedContent';
+import MainRoutes from './routes';
 
 import './app.css';
 
 function App() {
   return (
     <div className="app">
-      <LoggedContent />
+      <MainRoutes />
     </div>
   );
 }
