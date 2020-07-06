@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 
 import Form from '../common/Form/Form';
 
+import * as userService from '../../services/userService';
+
 import './styles.css';
 
 function RegisterUserForm() {
@@ -12,6 +14,7 @@ function RegisterUserForm() {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [errors, setErrors] = useState(null);
 
   const inputs = [
     {
@@ -59,8 +62,20 @@ function RegisterUserForm() {
     },
   ];
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+
+    if (password !== confirmPassword) return setErrors({ message: 'Passwords doesnt match!' });
+
+    const user = {
+      name,
+      email,
+      password
+    }
+
+    const { err } = await userService.registerUser(user);
+    
+    if (err && err.response.status === 400) return setErrors({ message: err.response.data.msg });
 
     navigate('/login');
   }
@@ -71,6 +86,7 @@ function RegisterUserForm() {
       buttonsDisplay='btn_inline' 
       handleSubmit={handleSubmit} 
       title='Sign up' 
+      errors={errors}
       inputs={inputs} 
       buttons={buttons} />
   );
